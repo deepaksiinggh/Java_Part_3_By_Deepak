@@ -1,0 +1,78 @@
+External Sorting:-
+
+=>External shorting is the sorting technique where the java compiler does not now how to sort the element
+=>External sorting is mainly used to custom objects or classes
+=>java is unable to sort the object the sort method does not work for objects directly.
+the programmer has to explicitly write custom sorting logic to sort objects
+External sorting is achieved by two ways-
+A.) Comparable Interface
+B.) Comparator Interface
+
+
+A) Comparable Interface:-
+
+-> It is a pre-defined interface that belongs to java.lang package.
+-> Comparable interface is used to sort custom objects.
+-> It is also known as a "Functional interface" which contains one abstract method called compareTo() method
+-> Comparable interface can be used in two ways
+a.) Manually inheritance comparable interface
+b.) Anonymous Inner Class
+
+
+a.) Manually inheritance comparable interface:-
+
+s1- Create a sorting class and inherit the class with the comparable interface.
+s2- Override the compareTo method in the child class and provide the custom sorting logic.
+s3- Invoke the sort method by passing the collection reference
+
+note- By, default the sort method sorts the element in ascending order
+ to sort in descending change the custom sorting logic
+
+b.) By using Anonymous Inner Class:-
+ -> We can use the inner class and override the abstract method
+ -> This is possible only if the interface is a functional interface.
+
+Comparabele<Shorting Class> referenceVariable = new Comparable<>(){
+@Override
+public int compareTo(Sortingclass refrenceVariable/upcastedReferenceVariable){
+return custom sorting logic;
+}
+}
+
+
+B.) Comparator interface
+
+-> Comparator method belongs to util package
+-> The interface is a functional interface which contains an abstract method called as compare().
+-> comparator interface can we used in two ways:-
+
+a.) Manually
+b.) Anonymous inner class
+
+a.) Manually
+
+s1:- create a coustom shorting class and implement the class with a comparator interface
+
+s2:- override compare() method and provide the custom shorting logic
+
+   syntax- 
+
+@override
+public int compare(Object obj1,Object obj2)
+{
+provide the custom sorting logic
+}
+
+s3:- create an object of custom sorting class.
+s4:- pass the object reference in the collectionReference.sort() method as actual argument.
+
+b.) Anonymous Inner class-
+
+Comparator referenceVariable = new Comparator(){
+@override
+public int compare (object o1 object o2){
+
+o1.price.compareTo(o2.price);
+}
+}
+
